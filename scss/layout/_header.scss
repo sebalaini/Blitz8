@@ -1,0 +1,198 @@
+/***************
+LOGO
+***************/
+
+#fixed_logo {
+	@include mobile {
+		position: absolute;
+		width: 200px;
+		height: 60px;
+		left: 10px;
+		top: 2px;
+	}
+	@include tablet {
+		display: none;
+	}
+}
+
+.logo {
+	@include mobile {
+		display: none;
+	}
+	@include tablet {
+		display: block;
+		position: absolute;
+		width: 200px;
+		height: 80px;
+		left: 10px;
+		top: -10px;
+	}
+}
+
+
+
+/***************
+NAV FIXED TOP
+***************/
+
+.nav_wrapper_outside {
+	@include mobile {
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		margin-top: 0;
+		background: $vermilion;
+	}
+	@include tablet {
+		height: 64px;
+		border-bottom: 5px solid $sunshine;
+		border-top: none;
+		-webkit-transition: height 0.6s;
+	     -moz-transition: height 0.6s;
+    				transition: height 0.6s;
+	}
+}
+
+#fixed_nav {
+	@include mobile {
+	  background: $vermilion;
+		width: 100%;
+		max-width: 1200px;
+		height: 58px;
+		margin: 0 auto;
+		margin-top: -5px;
+		margin-bottom: 1px;
+		position: fixed;
+		top: 0;
+		z-index: 101;
+	 	border-bottom: 5px solid $sunshine;
+	}
+	@include tablet {
+		display: none;
+	}
+}
+
+.nav {
+	& {
+		@include mobile {
+			display: none;
+		 	position: fixed;
+		 	z-index: 100;
+		 	top: 0;
+			width: 100%;
+			max-width: 1200px;
+		 	margin: 52px auto 0;
+		 	padding-left: 0;
+		  background: $vermilion;
+		 	border-bottom: 5px solid $sunshine;
+		}
+		@include tablet {
+			display: inline-block !important;
+			height: 50px;
+			left: 0;
+			right: 0;
+			margin-top: 3px;
+			border-bottom: none;
+			text-align: right;
+		}
+	}
+
+	li {
+		@include mobile{
+			width: 100%;
+		}
+		@include tablet {
+			display: inline-block;
+			width: 130px;
+		}
+	}
+
+	li a {
+		display: block;
+		padding: 10px;
+		margin: 6px auto 5px;
+		text-align: center;
+		color: $fresh;
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	a.selected,
+	a:hover,
+	a:focus {
+		@include mobile {
+			font-weight: bold;
+			background: $sunshine;
+		}
+		@include tablet{
+			border-radius: 10px;
+		}
+	}
+}
+
+
+
+/***************
+NAV CENTER
+***************/
+
+
+.nav_wrapper_outside_center {
+	@include tablet {
+		position: absolute;
+		top: 270px;
+		height: 200px;
+		background: rgba(51, 58, 86, 0.4);
+		border-top: 5px solid $sunshine;
+	}
+}
+
+.nav_center {
+	@include tablet {
+		position: absolute;
+		top: 70px;
+		background: none;
+	}
+}
+
+.logo_center {
+	@include tablet {
+		height: 100px;
+		margin-top: -18px;
+	}
+}
+
+/***************
+COOCKIES
+***************/
+
+#cookies {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 500;
+	background: rgba(51, 58, 86, 0.9);
+	text-align: center;
+	padding-bottom: 15px;
+
+	& p {
+		padding: 0 20px;
+		margin: 10px auto;
+		max-width: 1200px;
+		color: $fresh;
+		font-size: 0.8em;
+	}
+
+	& button {
+		text-align: center;
+		margin: 0 auto;
+		padding: 5px;
+		background: none;
+		border: 3px solid $vermilion;
+		border-radius: 5px;
+		color: $fresh;
+		font-weight: bold;
+	}
+}
